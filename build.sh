@@ -85,7 +85,7 @@ fi
 echo "= building bash"
 
 pushd bash-${bash_version}
-CFLAGS="$CFLAGS -Os" ./configure --without-bash-malloc
+CFLAGS="$CFLAGS -Os" ./configure --without-bash-malloc --prefix="~/root/" 
 make
 make tests
 popd # bash-${bash_version}
